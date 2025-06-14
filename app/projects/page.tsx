@@ -1,32 +1,29 @@
+// app/projects/page.tsx
+import styles from './page.module.css';
+
 export default function ProjectsPage() {
   return (
-    <main style={{ padding: 20 }}>
-      <h1>My Projects</h1>
+    <main className={styles.main}>
+      <h1 className={styles.heading}>制作実績</h1>
 
-      <section style={{ marginTop: 30 }}>
-        <h2>📝 ToDoリストアプリ</h2>
-        <p>
-          Next.js と React の学習の一環として、シンプルな ToDo アプリを作成しました。
-          タスクの追加、削除、完了処理、優先度や日付の設定などの基本機能を実装しています。
-        </p>
 
-        <h3>📌 使用技術</h3>
+      <section className={styles.projectCard}>
+        <h2 className={styles.heading2}>ToDoアプリ</h2>
+        <p>React と TypeScript を使用したタスク管理アプリです。ローカルストレージに対応し、タスクの追加・削除・フィルタリングが可能です。</p>
         <ul>
-          <li>Next.js (App Router)</li>
-          <li>React（useState フック）</li>
-          <li>TypeScript</li>
-          <li>CSS（インラインスタイル）</li>
+          <li>技術：React / TypeScript / CSS Modules</li>
+          <li><a href="https://github.com/ユーザー名/todo-app" target="_blank">GitHubリンク</a></li>
+          <li><a href="https://todo-app.vercel.app/" target="_blank">デプロイURL</a></li>
         </ul>
+      </section>
 
-        <h3>💡 工夫した点</h3>
+      <section className={styles.projectCard}>
+        <h2 className={styles.heading2}>このポートフォリオ</h2>
+        <p>Next.js App Routerを使って作成した自己紹介ページです。CSS Modules、GitHub連携、Vercelデプロイなどを実践。</p>
         <ul>
-          <li>完了したタスクに取り消し線を表示</li>
-          <li>優先度をドロップダウンで設定できる</li>
-          <li>日付付きでタスクを管理できる</li>
+          <li>技術：Next.js / TypeScript / CSS Modules / Vercel</li>
+          <li><a href="https://github.com/hisakai23/portfolio" target="_blank">GitHubリンク</a></li>
         </ul>
-
-        <h3>🖥️ スクリーンショット（任意）</h3>
-        <p>※ スクリーンショットがあれば、後で画像を貼り付けられます。</p>
       </section>
     </main>
   );

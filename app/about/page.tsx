@@ -1,13 +1,10 @@
-// app/about/page.tsx
-//import Link from 'next/link';
-import Header from '../components/Header'; // ← ヘッダーをインポート（階層に注意！）
+import Header from '../components/Header';
+import styles from './page.module.css'; // ← ここ追加！
 
 export default function AboutPage() {
   return (
-    <>
-      <main style={{ padding: 20 }}>
+      <main className={styles.main}>
         <p>私はゆうきです。Next.jsでポートフォリオを作っています。</p>
       </main>
-    </>
   );
 }
